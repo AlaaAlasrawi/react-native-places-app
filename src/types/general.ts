@@ -5,3 +5,9 @@ export type Place = {
   location: any;
   address: string;
 };
+
+export type RootStackParamList = {
+  AddPlacePage: undefined;
+  AllPlacesPage: undefined;
+  PlaceDetailsPage: { id: string } | undefined;
+};

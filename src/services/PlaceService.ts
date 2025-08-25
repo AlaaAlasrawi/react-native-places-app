@@ -36,3 +36,5 @@ class PlaceService {
     await AsyncStorage.removeItem(PlaceService.PLACES_KEY);
   }
 }
+
+export default new PlaceService();
