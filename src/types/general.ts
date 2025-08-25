@@ -9,5 +9,5 @@ export type Place = {
 export type RootStackParamList = {
   AddPlacePage: undefined;
   AllPlacesPage: undefined;
-  PlaceDetailsPage: { id: string } | undefined;
+  PlaceDetailsPage: { place: Place };
 };

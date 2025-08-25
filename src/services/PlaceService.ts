@@ -35,6 +35,15 @@ class PlaceService {
   public async clearPlaces(): Promise<void> {
     await AsyncStorage.removeItem(PlaceService.PLACES_KEY);
   }
+
+  public async updatePlace(updated: Place): Promise<void> {
+    const stored = await AsyncStorage.getItem(PlaceService.PLACES_KEY);
+    const places: Place[] = stored ? JSON.parse(stored) : [];
+    const idx = places.findIndex((p) => p.id === updated.id);
+    if (idx === -1) throw new Error("Place not found");
+    places[idx] = updated;
+    await AsyncStorage.setItem(PlaceService.PLACES_KEY, JSON.stringify(places));
+  }
 }
 
 export default new PlaceService();
