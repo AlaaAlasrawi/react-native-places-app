@@ -4,7 +4,7 @@ import { Text, View } from "react-native";
 const PlaceDetails = () => {
   return (
     <View>
-      <Text>PlaceDetails Page</Text>
+      <Text>Place Details Page</Text>
     </View>
   );
 };
